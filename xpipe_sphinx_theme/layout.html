@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  
+    {% block htmltitle %}
+      <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+    {% endblock %}
+
+    {# FAVICON #}
+    <link rel="icon" href="/_static/images/favicon.png"/>
+    <link rel="apple-touch-icon" href="/_static/images/apple-touch-icon.png"/>
+
+    {# CSS #}
+    <link rel="stylesheet" href="/_static/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{ pathto('/_static/css/' + style, 1) }}" type="text/css" />
+      
+    {# Scripts #}   
+    <script src="/_static/js/jquery-1.11.3.min.js"></script>
+    <script src="/_static/js/bootstrap.min.js"></script>
+    <script src="/_static/js/hr-headlines.js"></script>
+    <script src="/_static/js/toc.js"></script>
+    <script src="/_static/js/offset-anchors.js"></script>
+  </head>
+  <body>
+    {% include 'header.html' %}
+  
+    <div class="container">
+      <div class="row">
+        <div id="aside-wrapper" class="col-md-3 col-md-push-9">
+          <aside>
+            <div id="inner-aside-wrapper">
+              <h3><a href="{{ pathto(master_doc) }}">Table of contents</a></h3>
+              <hr />
+              {{ toctree(maxdepth=3, collapse=False, includehidden=True) }}
+            </div>
+          </aside>
+        </div>
+        <div id="main-wrapper" class="col-md-9 col-md-pull-3">
+          <main>
+          {% block body %}
+          {% endblock %}
+          </main>
+        </div>
+      </div>
+    </div>
+      
+    {% include 'footer.html' %}
+  </body>
+</html>

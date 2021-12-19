@@ -1,0 +1,191 @@
+@import "bootstrap.min"
+
+$break-medium: 992px
+
+/* Navbar */
+
+nav
+  margin-bottom: 0 !important
+  background: #f2f2f2 !important
+  border-color: #dfdfdf !important
+  box-shadow: 0px 7px 12px 0px rgba(70,70,70,0.4)
+    
+  #preload-shining-logo
+    display: none
+    
+  .navbar-brand
+    height: 70px !important
+    padding-top: 9px !important
+    padding-bottom: 6px !important
+
+  .navbar-toggle
+    margin-top: 17px !important
+
+  .navbar-nav
+    margin-top: 9px !important
+
+  a
+    font-size: 149%
+    color: #1a1a1a !important
+    
+  a:hover
+    background: #e5e5e5 !important
+    border-radius: 2px
+
+  .fa-list-alt
+    vertical-align: -5% !important
+
+/* Main content */
+
+body 
+  background: #e6e6e6 !important
+  margin-top: 89px !important
+  
+#main-wrapper
+  padding-left: 0
+  @media screen and (max-width: $break-medium)
+    padding-right: 0
+  
+main
+  background: #fff
+  padding-left: 2em
+  padding-right: 2em
+  box-shadow: 0px 3px 6px 0px rgba(50,50,50,0.5)
+  
+  h1
+    font-size: 31px
+    color: #3366cc !important
+    text-align: center
+  
+  h2
+    font-size: 25px
+    
+  h3
+    font-size: 22px
+    
+  h4
+    font-size: 19px
+  
+  dd
+    margin-left: 42px
+    margin-bottom: 12px
+  
+  hr
+    margin-top: 12px !important
+    margin-bottom: 30px !important
+    border-color: #3366cc !important
+    box-shadow: 0px 3px 6px 0px rgba(50,50,50,0.35)
+    
+  table:not(.field-list):not(.option-list)
+    @extend .table, .table-bordered, .table-hover, .table-condensed
+
+  
+main, aside
+  overflow: hidden
+  margin-bottom: 15px
+  border-radius: 2px
+
+  p 
+    color: #1a1a1a
+
+/* Table of contents */ 
+
+#aside-wrapper
+  padding-left: 0 !important
+  padding-right: 0 !important 
+  
+aside
+  width: 100%
+  @media screen and (min-width: $break-medium)
+    position: absolute
+    overflow-y: auto
+
+  background: #f2f2f2
+  padding-left: 0
+  padding-right: 0
+  padding-top: 0
+  margin-left: 0
+  margin-right: 0 !important
+  box-shadow: 0px 3px 5px -2px rgba(50,50,50,0.5)
+  
+  h3
+    color: #3366cc !important
+    text-align: center
+	
+  hr
+    border-color: #3366cc !important
+    box-shadow: 0px 3px 6px 0px rgba(50,50,50,0.35)
+    margin: 0px 15px 25px !important
+	
+  ul
+    list-style: none !important
+    padding-left: 10px
+    padding-right: 10px
+	
+  ul>li.toctree-l1
+    padding-bottom: 0.5em
+	
+  li.current
+    &>a
+      font-weight: bold
+	 
+  .toctree-l1
+    font-size: 17px
+    line-height: 24px
+	
+    a
+      color: #1a1a1a !important
+	
+  .toctree-l2
+    display: none
+    font-size: 15px
+    line-height: 23px
+	
+  .toctree-l1.current .toctree-l2
+    display: list-item
+	
+  .toctree-l3
+    font-size: 13px
+    line-height: 22px
+
+  a:hover
+    background: #e5e5e5 !important
+    border-radius: 2px
+    text-decoration: none !important
+	
+  a:focus
+    outline: none !important
+    text-decoration: none !important
+ 
+#inner-aside-wrapper
+  overflow: hidden
+  
+  > ul
+    margin-bottom: 0
+  
+  > ul:last-child
+    margin-bottom: 10px
+    
+/* Footer */
+	
+footer
+  padding-top: 1.5em
+  border-top: 1px solid #dfdfdf
+  padding-bottom: 1em
+  background: #f2f2f2
+  box-shadow: 0px 3px 6px 0px rgba(50,50,50,0.5)
+
+  p
+    font-size: 90%
+ 
+/* Misc */
+ 
+i.fa 
+  vertical-align: 4%
+
+.btn 
+  box-shadow: 0px 1px 4px 0px rgba(50,50,50,0.5)
+
+.row 
+  margin-left: 0 !important
+  margin-right: 0 !important
